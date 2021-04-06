@@ -8,7 +8,7 @@
 -->
 <SilverJConfiguration>
   <!--JDK Path-->
-  <JDKPath>E:\java\bin</JDKPath>
+  <JDKPath></JDKPath>
   <!-- web browser -->
   <WebBrowser>
   </WebBrowser>
