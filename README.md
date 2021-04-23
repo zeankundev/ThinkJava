@@ -8,7 +8,14 @@ An active Java IDE coded in C# for students, hobbyists, teams, friends and compa
 <img src="https://img.shields.io/badge/status-stable-green">
 <br>
 <img src="https://img.shields.io/badge/buildversion-136-red">
-## Images
+
+## How to use and modify?
+1. First, type the following code to your Command Prompt or Git Bash
+```
+git clone https://github.com/zeankundev/ThinkJava/
+```
+2. Enjoy!
+### Images
 <img src="https://a.fsdn.com/con/app/proj/thinkjava-ide/screenshots/s1.png/max/max/1">
 <img src="https://a.fsdn.com/con/app/proj/thinkjava-ide/screenshots/s2.png/max/max/1">
 <img src="https://a.fsdn.com/con/app/proj/thinkjava-ide/screenshots/s3.png/max/max/1">
