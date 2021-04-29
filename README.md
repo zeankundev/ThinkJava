@@ -1,5 +1,5 @@
 # ThinkJava
-An active Java IDE coded in C# for students, hobbyists, teams, friends and companies. Fetaures invalid lines, error list, project explorer, auto completion (Senzo), applet maker, game maker for busy people or individuals.
+An active Java IDE coded in C# for students, hobbyists, teams, friends and companies. Fetaures invalid lines, error list, project explorer, auto completion (Senzo), applet maker, game maker for busy people or individuals. IDE project made for sixth grade elementary school project and for everyonw
 <br>
 [![Download ThinkJava. The Professional Java IDE](https://img.shields.io/sourceforge/dm/thinkjava-ide.svg)](https://sourceforge.net/projects/thinkjava-ide/files/latest/download)
 <br>
