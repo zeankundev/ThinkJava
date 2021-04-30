@@ -14,7 +14,18 @@ An active Java IDE coded in C# for students, hobbyists, teams, friends and compa
 ```
 git clone https://github.com/zeankundev/ThinkJava/
 ```
-2. Enjoy!
+2. Direct it to your project folder
+```
+cd ThinkJava
+```
+3. Open the .sln or .csproj file of ThinkJava
+4. Enjoy our demos or make some Java projects.
+<br>
+Question, feedback? Email me at zeanfender11@gmail.com.
+<br>
+Want to make ThinkJava better by improving the code? Email me at zeanfender11@gmail.com along with your GitHub username to be a contributor.
+<br>
+Have fun using ThinkJava!
 ### Images
 <img src="https://a.fsdn.com/con/app/proj/thinkjava-ide/screenshots/s1.png/max/max/1">
 <img src="https://a.fsdn.com/con/app/proj/thinkjava-ide/screenshots/s2.png/max/max/1">
