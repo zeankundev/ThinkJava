@@ -8,7 +8,7 @@
 -->
 <SilverJConfiguration>
   <!--JDK Path-->
-  <JDKPath></JDKPath>
+  <JDKPath>E:\java\bin</JDKPath>
   <!-- web browser -->
   <WebBrowser>
   </WebBrowser>
@@ -28,9 +28,9 @@
   <AutoCompleteBraces>true</AutoCompleteBraces>
   <!--split containers-->
   <SplitContainer1>1132</SplitContainer1>
-  <SplitContainer2>491</SplitContainer2>
-  <SplitContainer3>233</SplitContainer3>
-  <SplitContainer4>315</SplitContainer4>
+  <SplitContainer2>499</SplitContainer2>
+  <SplitContainer3>254</SplitContainer3>
+  <SplitContainer4>301</SplitContainer4>
   <!--tabs,documents etc views-->
   <TabsAlignment>Top</TabsAlignment>
   <ShowStatusStrip>true</ShowStatusStrip>

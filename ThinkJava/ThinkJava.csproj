@@ -73,8 +73,14 @@
     <TargetZone>LocalIntranet</TargetZone>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="DiscordRPC, Version=1.0.175.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\DiscordRichPresence.1.0.175\lib\net35\DiscordRPC.dll</HintPath>
+    </Reference>
     <Reference Include="ICSharpCode.TextEditor">
       <HintPath>..\..\..\Users\Pritam\Downloads\Compressed\ICSharpCode.TextEditor\ICSharpCode.TextEditor\ICSharpCode.TextEditor.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>packages\Newtonsoft.Json.12.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Configuration" />
@@ -442,6 +448,7 @@
     <EmbeddedResource Include="ToolTipControlPanel.resx">
       <DependentUpon>ToolTipControlPanel.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="packages.config" />
     <None Include="Properties\app.manifest" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -506,6 +513,8 @@
     <None Include="Resources\hit3001.png" />
     <None Include="Resources\appletproject1.png" />
     <None Include="Resources\Rolling_1s_200px__1_.gif" />
+    <None Include="Resources\media_1592848855_logo_buatan_indonesia_01.png" />
+    <None Include="Resources\media_1592848872_logo_buatan_indonesia_02.png" />
     <Content Include="StartText.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>

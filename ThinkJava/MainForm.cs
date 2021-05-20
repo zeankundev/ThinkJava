@@ -33,7 +33,7 @@ using System.Data;
 using System.Drawing;
 using System.Collections;
 using System.Text;
-using Discord;
+using DiscordRPC;
 using System.IO;
 using System.Windows.Forms;
 using ICSharpCode.TextEditor;
@@ -41,6 +41,8 @@ using System.Xml;
 using System.Diagnostics;
 using System.Drawing.Drawing2D;
 using ICSharpCode.TextEditor.Document;
+using DiscordRPC.Logging;
+
 namespace Silver_J
 {
     public partial class MainForm : Form
@@ -49,6 +51,7 @@ namespace Silver_J
         public MainForm()
         {
             InitializeComponent();
+            init();
         }
 
         /// <summary>
@@ -100,6 +103,57 @@ namespace Silver_J
             return s;
         }
 
+        //**************************************************************************************************************
+        //      initialize discord rich presence to display ide info to discord
+        //**************************************************************************************************************
+
+        // declare variable to start rich presence
+        public DiscordRpcClient client;
+
+        // init discord rich presence
+        void init()
+        {
+            // get the application id from discord developer portal
+            client = new DiscordRpcClient("809962741070430228");
+
+            // init the logger
+            client.Logger = new ConsoleLogger()
+            {
+                Level = LogLevel.Warning
+            };
+
+            // log the events
+            client.OnReady += (sender, e) =>
+            {
+                Console.WriteLine("Ready from user {0}", e.User.Username);
+            };
+
+            client.OnPresenceUpdate += (sender, e) =>
+            {
+                Console.WriteLine("Update {0}", e.Presence);
+            };
+
+            // init to discord
+            client.Initialize();
+
+            //set the rich presence
+            client.SetPresence(new RichPresence()
+            {
+                Details = "At the Start Page",
+                State = "Idle",
+                Assets = new Assets()
+                {
+                    LargeImageKey = "logo"
+                }
+            });
+        }
+
+        // shut down discord rpc when thinkjava closes
+        void shutdown()
+        {
+            client.Dispose();
+        }
+        
 
         //**************************************************************************************************************
         //      get Current Project Type
@@ -860,6 +914,7 @@ namespace Silver_J
                             {
                                 MessageBox.Show("Error while doing setup. Details are here shown.\nERROR 730 occured.\nCode: INVALID_JDK_PATH", "Error");
                                 Application.Exit();
+                                shutdown();
                             }
                         }
 
@@ -877,6 +932,7 @@ namespace Silver_J
                             {
                                 MessageBox.Show("Error while doing setup. Details are here shown.\nERROR 730 occured.\nCode: INVALID_JDK_PATH", "Error");
                                 Application.Exit();
+                                shutdown();
                             }
                         }
                     }
@@ -890,6 +946,7 @@ namespace Silver_J
                             doc.SelectSingleNode("SilverJConfiguration/JDKPath").InnerText = "null";
                             doc.Save(configfile);
                             Application.Exit();
+                            shutdown();
                         }
                         catch
                         {
@@ -897,6 +954,7 @@ namespace Silver_J
                             if (dg == DialogResult.OK)
                             {
                                 Application.Exit();
+                                shutdown();
                             }
                         }
                     }
@@ -911,6 +969,7 @@ namespace Silver_J
                         doc.SelectSingleNode("SilverJConfiguration/JDKPath").InnerText = "null";
                         doc.Save(configfile);
                         Application.Exit();
+                        shutdown();
                     }
                     catch
                     {
@@ -918,6 +977,7 @@ namespace Silver_J
                         if(dg==DialogResult.OK)
                         {
                             Application.Exit();
+                            shutdown();
                         }
                     }
                 }
@@ -1276,6 +1336,8 @@ namespace Silver_J
                 classeslabel.ForeColor = Color.White;
                 methodslabel.ForeColor = Color.White;
                 errorslabel.ForeColor = Color.White;
+                runMode.BackColor = Color.FromArgb(250, 160, 180, 210);
+                cpuConfig.BackColor = Color.FromArgb(250, 160, 180, 210);
 
                 ProjectExplorerTreeView.ForeColor = Color.Black;
                 ClassesTreeView.ForeColor = Color.Black;
@@ -1300,6 +1362,7 @@ namespace Silver_J
                 ErrorsListContextMenuStrip.Renderer = new NightMenuRenderer();
                 MyToolStripZ.Renderer = new NightToolStripRenderer();
                 myTabControl.DrawMode = TabDrawMode.OwnerDrawFixed;
+                pictureBox2.Image = Properties.Resources.media_1592848872_logo_buatan_indonesia_02;
 
                 myTabControl.Transparent1 = 255;
                 myTabControl.Transparent2 = 255;
@@ -1313,9 +1376,9 @@ namespace Silver_J
                 methodspanel.Transparent2 = 255;
                 errorslistpanel.Transparent1 = 255;
                 errorslistpanel.Transparent2 = 255;
-                runMode.BackColor = Color.Black;
+                runMode.BackColor = ColorTranslator.FromHtml("#121212");
                 runMode.ForeColor = Color.White;
-                cpuConfig.BackColor = Color.Black;
+                cpuConfig.BackColor = ColorTranslator.FromHtml("#121212");
                 cpuConfig.ForeColor = Color.White;
                 label1.ForeColor = Color.White;
 
@@ -2309,6 +2372,8 @@ namespace Silver_J
         /// <param name="e"></param>
         private void MainForm_Closing(object sender, FormClosingEventArgs e)
         {
+            shutdown();
+
             Boolean isfile = false;
 
             if (myTabControl.TabCount > 0)
@@ -2396,6 +2461,7 @@ namespace Silver_J
             doc.SelectSingleNode("SilverJConfiguration/SplitContainer3").InnerText = s3.ToString();
             doc.SelectSingleNode("SilverJConfiguration/SplitContainer4").InnerText = s4.ToString();
             doc.Save(configfile);
+
 
         }
 
@@ -2538,8 +2604,18 @@ namespace Silver_J
                                 String prjname = projectfilename.Substring(projectfilename.LastIndexOf("\\") + 1);
                                 prjname = prjname.Remove(prjname.Length - 9);
                                 this.Text = "ThinkJava - " + prjname + " [Java Application]";
+                                client.SetPresence(new RichPresence()
+                                {
+                                    Details = "Making a Java application",
+                                    State = "Project: " + prjname,
+                                    Assets = new Assets()
+                                    {
+                                        LargeImageKey = "logo",
+                                        SmallImageKey = "java_application"
+                                    }
+                                });
 
-                                String jclassfilename = javaclassfilename.Substring(javaclassfilename.LastIndexOf("\\") + 1);
+                            String jclassfilename = javaclassfilename.Substring(javaclassfilename.LastIndexOf("\\") + 1);
                                 String jclassnamewithoutjava = jclassfilename.Remove(jclassfilename.Length - 5);
 
                                 MyTabPage mytabpage = new MyTabPage(this);
@@ -2698,6 +2774,16 @@ namespace Silver_J
                             String prjname = projectfilename.Substring(projectfilename.LastIndexOf("\\") + 1);
                             prjname = prjname.Remove(prjname.Length - 9);
                             this.Text = "ThinkJava - " + prjname + " [Java Applet]";
+                            client.SetPresence(new RichPresence()
+                            {
+                                Details = "Making a Java applet",
+                                State = "Project: " + prjname,
+                                Assets = new Assets()
+                                {
+                                    LargeImageKey = "logo",
+                                    SmallImageKey = "java_applet"
+                                }
+                            });
 
                             String jclassfilename = javaclassfilename.Substring(javaclassfilename.LastIndexOf("\\") + 1);
                             String jclassnamewithoutjava = jclassfilename.Remove(jclassfilename.Length - 5);
@@ -3877,7 +3963,19 @@ namespace Silver_J
 
 
                             //add project name to form
-                            this.Text = "ThinkJava - " + projectname + ".slvjproj";
+                            this.Text = "ThinkJava - " + projectname + ".tjsln";
+
+                            //add project name to discord rpc
+                            client.SetPresence(new RichPresence()
+                            {
+                                Details = "Editing a Java project",
+                                State = "Project: " + projectname + ".tjsln",
+                                Assets = new Assets()
+                                {
+                                    LargeImageKey = "logo",
+                                    SmallImageKey = "open_project"
+                                }
+                            });
 
                             //add all files to myTabControl
                             foreach (String file in fileslist)
@@ -4398,7 +4496,7 @@ namespace Silver_J
                     {
                         mytabpage.AddLanguages("Text");
                     }
-                    if (Path.GetExtension(file) == ".C" || Path.GetExtension(file) == ".CPP" || Path.GetExtension(file) == ".c++")
+                    if (Path.GetExtension(file) == ".c" || Path.GetExtension(file) == ".cpp" || Path.GetExtension(file) == ".c++")
                     {
                         mytabpage.AddLanguages("C/C++");
                     }
@@ -5658,6 +5756,16 @@ namespace Silver_J
 
                 //add project name to form
                 this.Text = "ThinkJava - " + projectname;
+                client.SetPresence(new RichPresence()
+                {
+                    Details = "Editing a Java project",
+                    State = "Project: " + projectname + ".tjsln",
+                    Assets = new Assets()
+                    {
+                        LargeImageKey = "logo",
+                        SmallImageKey = "open_project"
+                    }
+                });
 
                 //add all files to myTabControl
                 foreach (String file in fileslist)
@@ -9374,6 +9482,30 @@ namespace Silver_J
         }
 
         private void toolStripButton1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void File_LinkToSushiTextEditor_Click(object sender, EventArgs e)
+        {
+            // executes the file open dialog
+            if(ExternalEditor.ShowDialog() == DialogResult.OK)
+            {
+                // check if sushi.exe file exists
+                if(ExternalEditor.FileName.Contains("sushi.exe"))
+                {
+                    // sends a alert if it contains sushi.exe
+                    MessageBox.Show("Sushi Text Editor found");
+                }
+                else
+                {
+                    // if not, send a failure
+                    MessageBox.Show("Cannot found Sushi");
+                }
+            }
+        }
+
+        private void File_RecentProjectMenuItem_Click(object sender, EventArgs e)
         {
 
         }

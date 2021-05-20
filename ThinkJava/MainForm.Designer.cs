@@ -1,4 +1,4 @@
-﻿#region Copyright
+#region Copyright
 /***************************************************************************************
  ******Copyright (C) 2016 Pritam Zope*****
  
@@ -81,6 +81,7 @@ namespace Silver_J
             this.File_OpenFilesMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
             this.File_LoadSampleProjectMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.File_LinkToSushiTextEditor = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
             this.File_SaveMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.File_SaveAsMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -273,6 +274,8 @@ namespace Silver_J
             this.myTabControlContextMenu_OpenFileFolderMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.startpagepanel = new Silver_J.PanelZ();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.mouseHoverLabel4 = new Silver_J.MouseHoverLabel();
             this.mouseHoverLabel3 = new Silver_J.MouseHoverLabel();
             this.mouseHoverLabel2 = new Silver_J.MouseHoverLabel();
@@ -330,7 +333,7 @@ namespace Silver_J
             this.toolStripSeparator40 = new System.Windows.Forms.ToolStripSeparator();
             this.textEditorContextMenu_ViewinWebBrowserMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.ExternalEditor = new System.Windows.Forms.OpenFileDialog();
             this.MyMenuStripZ.SuspendLayout();
             this.toolstrippanel.SuspendLayout();
             this.MyToolStripZ.SuspendLayout();
@@ -353,6 +356,8 @@ namespace Silver_J
             this.myTabControlContextMenuStrip.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.startpagepanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.ErrorsListContextMenuStrip.SuspendLayout();
             this.errorslistpanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer4)).BeginInit();
@@ -362,7 +367,6 @@ namespace Silver_J
             this.classespanel.SuspendLayout();
             this.methodspanel.SuspendLayout();
             this.textEditorContextMenuStrip.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // MyMenuStripZ
@@ -389,6 +393,7 @@ namespace Silver_J
             this.File_OpenFilesMenuItem,
             this.toolStripSeparator4,
             this.File_LoadSampleProjectMenuItem,
+            this.File_LinkToSushiTextEditor,
             this.toolStripSeparator5,
             this.File_SaveMenuItem,
             this.File_SaveAsMenuItem,
@@ -469,7 +474,7 @@ namespace Silver_J
             // 
             this.File_New_ClassMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
             this.File_New_ClassMenuItem.ForeColor = System.Drawing.Color.Black;
-            this.File_New_ClassMenuItem.Image = global::Silver_J.Properties.Resources._class;
+            this.File_New_ClassMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("File_New_ClassMenuItem.Image")));
             this.File_New_ClassMenuItem.Name = "File_New_ClassMenuItem";
             this.File_New_ClassMenuItem.Size = new System.Drawing.Size(287, 22);
             this.File_New_ClassMenuItem.Text = "  Class";
@@ -514,7 +519,7 @@ namespace Silver_J
             // 
             this.File_New_HTMLFileMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
             this.File_New_HTMLFileMenuItem.ForeColor = System.Drawing.Color.Black;
-            this.File_New_HTMLFileMenuItem.Image = global::Silver_J.Properties.Resources.css;
+            this.File_New_HTMLFileMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("File_New_HTMLFileMenuItem.Image")));
             this.File_New_HTMLFileMenuItem.Name = "File_New_HTMLFileMenuItem";
             this.File_New_HTMLFileMenuItem.Size = new System.Drawing.Size(287, 22);
             this.File_New_HTMLFileMenuItem.Text = "  HTML File";
@@ -524,7 +529,7 @@ namespace Silver_J
             // 
             this.File_New_CSSFileMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
             this.File_New_CSSFileMenuItem.ForeColor = System.Drawing.Color.Black;
-            this.File_New_CSSFileMenuItem.Image = global::Silver_J.Properties.Resources.css;
+            this.File_New_CSSFileMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("File_New_CSSFileMenuItem.Image")));
             this.File_New_CSSFileMenuItem.Name = "File_New_CSSFileMenuItem";
             this.File_New_CSSFileMenuItem.Size = new System.Drawing.Size(287, 22);
             this.File_New_CSSFileMenuItem.Text = "  CSS File";
@@ -534,7 +539,7 @@ namespace Silver_J
             // 
             this.File_New_TextFileMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
             this.File_New_TextFileMenuItem.ForeColor = System.Drawing.Color.Black;
-            this.File_New_TextFileMenuItem.Image = global::Silver_J.Properties.Resources.css;
+            this.File_New_TextFileMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("File_New_TextFileMenuItem.Image")));
             this.File_New_TextFileMenuItem.Name = "File_New_TextFileMenuItem";
             this.File_New_TextFileMenuItem.Size = new System.Drawing.Size(287, 22);
             this.File_New_TextFileMenuItem.Text = "  Text File";
@@ -544,7 +549,7 @@ namespace Silver_J
             // 
             this.File_New_JavaScriptFileMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
             this.File_New_JavaScriptFileMenuItem.ForeColor = System.Drawing.Color.Black;
-            this.File_New_JavaScriptFileMenuItem.Image = global::Silver_J.Properties.Resources.css;
+            this.File_New_JavaScriptFileMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("File_New_JavaScriptFileMenuItem.Image")));
             this.File_New_JavaScriptFileMenuItem.Name = "File_New_JavaScriptFileMenuItem";
             this.File_New_JavaScriptFileMenuItem.Size = new System.Drawing.Size(287, 22);
             this.File_New_JavaScriptFileMenuItem.Text = "  JavaScript File";
@@ -554,7 +559,7 @@ namespace Silver_J
             // 
             this.File_New_SQLFileMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
             this.File_New_SQLFileMenuItem.ForeColor = System.Drawing.Color.Black;
-            this.File_New_SQLFileMenuItem.Image = global::Silver_J.Properties.Resources.css;
+            this.File_New_SQLFileMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("File_New_SQLFileMenuItem.Image")));
             this.File_New_SQLFileMenuItem.Name = "File_New_SQLFileMenuItem";
             this.File_New_SQLFileMenuItem.Size = new System.Drawing.Size(287, 22);
             this.File_New_SQLFileMenuItem.Text = "  SQL File";
@@ -564,7 +569,7 @@ namespace Silver_J
             // 
             this.File_New_XMLFileMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
             this.File_New_XMLFileMenuItem.ForeColor = System.Drawing.Color.Black;
-            this.File_New_XMLFileMenuItem.Image = global::Silver_J.Properties.Resources.css;
+            this.File_New_XMLFileMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("File_New_XMLFileMenuItem.Image")));
             this.File_New_XMLFileMenuItem.Name = "File_New_XMLFileMenuItem";
             this.File_New_XMLFileMenuItem.Size = new System.Drawing.Size(287, 22);
             this.File_New_XMLFileMenuItem.Text = "  XML File";
@@ -623,6 +628,14 @@ namespace Silver_J
             this.File_LoadSampleProjectMenuItem.Size = new System.Drawing.Size(260, 22);
             this.File_LoadSampleProjectMenuItem.Text = "Load Sample Project";
             this.File_LoadSampleProjectMenuItem.Click += new System.EventHandler(this.File_LoadSampleProjectMenuItem_Click);
+            // 
+            // File_LinkToSushiTextEditor
+            // 
+            this.File_LinkToSushiTextEditor.ForeColor = System.Drawing.Color.Black;
+            this.File_LinkToSushiTextEditor.Name = "File_LinkToSushiTextEditor";
+            this.File_LinkToSushiTextEditor.Size = new System.Drawing.Size(260, 22);
+            this.File_LinkToSushiTextEditor.Text = "Link to Sushi Text Editor";
+            this.File_LinkToSushiTextEditor.Click += new System.EventHandler(this.File_LinkToSushiTextEditor_Click);
             // 
             // toolStripSeparator5
             // 
@@ -748,6 +761,7 @@ namespace Silver_J
             this.File_RecentProjectMenuItem.Name = "File_RecentProjectMenuItem";
             this.File_RecentProjectMenuItem.Size = new System.Drawing.Size(260, 22);
             this.File_RecentProjectMenuItem.Text = "Recent Project";
+            this.File_RecentProjectMenuItem.Click += new System.EventHandler(this.File_RecentProjectMenuItem_Click);
             // 
             // File_RecentProject_NoRecentProjectMenuItem
             // 
@@ -1667,7 +1681,7 @@ namespace Silver_J
             // Class_ToolStripButton
             // 
             this.Class_ToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.Class_ToolStripButton.Image = global::Silver_J.Properties.Resources._class;
+            this.Class_ToolStripButton.Image = ((System.Drawing.Image)(resources.GetObject("Class_ToolStripButton.Image")));
             this.Class_ToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.Class_ToolStripButton.Name = "Class_ToolStripButton";
             this.Class_ToolStripButton.Size = new System.Drawing.Size(23, 22);
@@ -1987,7 +2001,7 @@ namespace Silver_J
             // 
             this.splitContainer1.Panel2.Controls.Add(this.splitContainer4);
             this.splitContainer1.Size = new System.Drawing.Size(1134, 483);
-            this.splitContainer1.SplitterDistance = 864;
+            this.splitContainer1.SplitterDistance = 872;
             this.splitContainer1.SplitterWidth = 6;
             this.splitContainer1.TabIndex = 7;
             // 
@@ -2007,7 +2021,7 @@ namespace Silver_J
             // 
             this.splitContainer2.Panel2.Controls.Add(this.ErrorTextBox);
             this.splitContainer2.Panel2.Controls.Add(this.errorslistpanel);
-            this.splitContainer2.Size = new System.Drawing.Size(864, 483);
+            this.splitContainer2.Size = new System.Drawing.Size(872, 483);
             this.splitContainer2.SplitterDistance = 400;
             this.splitContainer2.SplitterWidth = 6;
             this.splitContainer2.TabIndex = 0;
@@ -2026,8 +2040,8 @@ namespace Silver_J
             // splitContainer3.Panel2
             // 
             this.splitContainer3.Panel2.Controls.Add(this.myTabControl);
-            this.splitContainer3.Size = new System.Drawing.Size(862, 398);
-            this.splitContainer3.SplitterDistance = 234;
+            this.splitContainer3.Size = new System.Drawing.Size(870, 398);
+            this.splitContainer3.SplitterDistance = 236;
             this.splitContainer3.SplitterWidth = 6;
             this.splitContainer3.TabIndex = 0;
             // 
@@ -2044,7 +2058,7 @@ namespace Silver_J
             this.ProjectExplorerTreeView.SelectedImageIndex = 9;
             this.ProjectExplorerTreeView.ShowLines = false;
             this.ProjectExplorerTreeView.ShowNodeToolTips = true;
-            this.ProjectExplorerTreeView.Size = new System.Drawing.Size(234, 373);
+            this.ProjectExplorerTreeView.Size = new System.Drawing.Size(236, 373);
             this.ProjectExplorerTreeView.TabIndex = 1;
             this.ProjectExplorerTreeView.NodeMouseDoubleClick += new System.Windows.Forms.TreeNodeMouseClickEventHandler(this.ProjectExplorerTreeView_NodeMouseDoubleClick);
             // 
@@ -2087,7 +2101,7 @@ namespace Silver_J
             // New_Class_ProjExplorerContextMenuItem
             // 
             this.New_Class_ProjExplorerContextMenuItem.ForeColor = System.Drawing.Color.Black;
-            this.New_Class_ProjExplorerContextMenuItem.Image = global::Silver_J.Properties.Resources._class;
+            this.New_Class_ProjExplorerContextMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("New_Class_ProjExplorerContextMenuItem.Image")));
             this.New_Class_ProjExplorerContextMenuItem.Name = "New_Class_ProjExplorerContextMenuItem";
             this.New_Class_ProjExplorerContextMenuItem.Size = new System.Drawing.Size(203, 22);
             this.New_Class_ProjExplorerContextMenuItem.Text = "Class                                  ";
@@ -2159,7 +2173,7 @@ namespace Silver_J
             // New_SQLFile_ProjExplorerContextMenuItem
             // 
             this.New_SQLFile_ProjExplorerContextMenuItem.ForeColor = System.Drawing.Color.Black;
-            this.New_SQLFile_ProjExplorerContextMenuItem.Image = global::Silver_J.Properties.Resources._class;
+            this.New_SQLFile_ProjExplorerContextMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("New_SQLFile_ProjExplorerContextMenuItem.Image")));
             this.New_SQLFile_ProjExplorerContextMenuItem.Name = "New_SQLFile_ProjExplorerContextMenuItem";
             this.New_SQLFile_ProjExplorerContextMenuItem.Size = new System.Drawing.Size(203, 22);
             this.New_SQLFile_ProjExplorerContextMenuItem.Text = "SQL File";
@@ -2248,21 +2262,21 @@ namespace Silver_J
             // 
             this.ProjectExplorerImageList.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("ProjectExplorerImageList.ImageStream")));
             this.ProjectExplorerImageList.TransparentColor = System.Drawing.Color.Transparent;
-            this.ProjectExplorerImageList.Images.SetKeyName(0, "classfile.png");
-            this.ProjectExplorerImageList.Images.SetKeyName(1, "cssfile2.png");
-            this.ProjectExplorerImageList.Images.SetKeyName(2, "htmlfile2.png");
-            this.ProjectExplorerImageList.Images.SetKeyName(3, "imagefile.png");
-            this.ProjectExplorerImageList.Images.SetKeyName(4, "jarfile.png");
-            this.ProjectExplorerImageList.Images.SetKeyName(5, "javafile.png");
+            this.ProjectExplorerImageList.Images.SetKeyName(0, "java.png");
+            this.ProjectExplorerImageList.Images.SetKeyName(1, "css.png");
+            this.ProjectExplorerImageList.Images.SetKeyName(2, "htmlfile.png");
+            this.ProjectExplorerImageList.Images.SetKeyName(3, "image.png");
+            this.ProjectExplorerImageList.Images.SetKeyName(4, "jar.png");
+            this.ProjectExplorerImageList.Images.SetKeyName(5, "java.png");
             this.ProjectExplorerImageList.Images.SetKeyName(6, "javascriptfile2.png");
             this.ProjectExplorerImageList.Images.SetKeyName(7, "newfile2.png");
             this.ProjectExplorerImageList.Images.SetKeyName(8, "package.png");
             this.ProjectExplorerImageList.Images.SetKeyName(9, "solution.png");
-            this.ProjectExplorerImageList.Images.SetKeyName(10, "sqlfile2.png");
-            this.ProjectExplorerImageList.Images.SetKeyName(11, "textfile2.png");
-            this.ProjectExplorerImageList.Images.SetKeyName(12, "xmlfile2.png");
-            this.ProjectExplorerImageList.Images.SetKeyName(13, "cppfile.png");
-            this.ProjectExplorerImageList.Images.SetKeyName(14, "headerfile.png");
+            this.ProjectExplorerImageList.Images.SetKeyName(10, "sql.png");
+            this.ProjectExplorerImageList.Images.SetKeyName(11, "txtfile.png");
+            this.ProjectExplorerImageList.Images.SetKeyName(12, "xmlfile.png");
+            this.ProjectExplorerImageList.Images.SetKeyName(13, "cpp.png");
+            this.ProjectExplorerImageList.Images.SetKeyName(14, "header.png");
             // 
             // projectexplorerpanel
             // 
@@ -2274,7 +2288,7 @@ namespace Silver_J
             this.projectexplorerpanel.GradientAngle = 90;
             this.projectexplorerpanel.Location = new System.Drawing.Point(0, 0);
             this.projectexplorerpanel.Name = "projectexplorerpanel";
-            this.projectexplorerpanel.Size = new System.Drawing.Size(234, 25);
+            this.projectexplorerpanel.Size = new System.Drawing.Size(236, 25);
             this.projectexplorerpanel.StartColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
             this.projectexplorerpanel.TabIndex = 0;
             this.projectexplorerpanel.Transparent1 = 150;
@@ -2308,7 +2322,7 @@ namespace Silver_J
             this.myTabControl.Padding = new System.Drawing.Point(25, 5);
             this.myTabControl.SelectedIndex = 0;
             this.myTabControl.ShowToolTips = true;
-            this.myTabControl.Size = new System.Drawing.Size(622, 398);
+            this.myTabControl.Size = new System.Drawing.Size(628, 398);
             this.myTabControl.TabIndex = 0;
             this.myTabControl.TextColor = System.Drawing.Color.Navy;
             this.myTabControl.Transparent1 = 170;
@@ -2404,13 +2418,14 @@ namespace Silver_J
             this.tabPage1.Location = new System.Drawing.Point(4, 28);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(614, 366);
+            this.tabPage1.Size = new System.Drawing.Size(620, 366);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Start Page";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
             // startpagepanel
             // 
+            this.startpagepanel.Controls.Add(this.pictureBox2);
             this.startpagepanel.Controls.Add(this.pictureBox1);
             this.startpagepanel.Controls.Add(this.mouseHoverLabel4);
             this.startpagepanel.Controls.Add(this.mouseHoverLabel3);
@@ -2427,12 +2442,33 @@ namespace Silver_J
             this.startpagepanel.GradientAngle = 90;
             this.startpagepanel.Location = new System.Drawing.Point(3, 3);
             this.startpagepanel.Name = "startpagepanel";
-            this.startpagepanel.Size = new System.Drawing.Size(606, 358);
+            this.startpagepanel.Size = new System.Drawing.Size(612, 358);
             this.startpagepanel.StartColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(250)))), ((int)(((byte)(250)))));
             this.startpagepanel.TabIndex = 0;
             this.startpagepanel.Transparent1 = 255;
             this.startpagepanel.Transparent2 = 255;
             this.startpagepanel.Paint += new System.Windows.Forms.PaintEventHandler(this.startpagepanel_Paint);
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox2.Image = global::Silver_J.Properties.Resources.media_1592848855_logo_buatan_indonesia_01;
+            this.pictureBox2.Location = new System.Drawing.Point(491, 21);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(113, 110);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 14;
+            this.pictureBox2.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::Silver_J.Properties.Resources.stored_for_later;
+            this.pictureBox1.Location = new System.Drawing.Point(33, 32);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(102, 99);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 13;
+            this.pictureBox1.TabStop = false;
             // 
             // mouseHoverLabel4
             // 
@@ -2493,7 +2529,7 @@ namespace Silver_J
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(240, 32);
             this.label1.TabIndex = 8;
-            this.label1.Text = "ThinkJava (build 146)";
+            this.label1.Text = "ThinkJava (build 148)";
             // 
             // startpagepanel_loadsampleproject
             // 
@@ -2580,7 +2616,7 @@ namespace Silver_J
             this.ErrorTextBox.Location = new System.Drawing.Point(0, 25);
             this.ErrorTextBox.Name = "ErrorTextBox";
             this.ErrorTextBox.ReadOnly = true;
-            this.ErrorTextBox.Size = new System.Drawing.Size(862, 50);
+            this.ErrorTextBox.Size = new System.Drawing.Size(870, 50);
             this.ErrorTextBox.TabIndex = 1;
             this.ErrorTextBox.Text = "";
             // 
@@ -2626,7 +2662,7 @@ namespace Silver_J
             this.errorslistpanel.GradientAngle = 90;
             this.errorslistpanel.Location = new System.Drawing.Point(0, 0);
             this.errorslistpanel.Name = "errorslistpanel";
-            this.errorslistpanel.Size = new System.Drawing.Size(862, 25);
+            this.errorslistpanel.Size = new System.Drawing.Size(870, 25);
             this.errorslistpanel.StartColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
             this.errorslistpanel.TabIndex = 0;
             this.errorslistpanel.Transparent1 = 255;
@@ -2636,7 +2672,7 @@ namespace Silver_J
             // 
             this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.button1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(746, 2);
+            this.button1.Location = new System.Drawing.Point(754, 2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(112, 21);
             this.button1.TabIndex = 1;
@@ -2672,7 +2708,7 @@ namespace Silver_J
             // 
             this.splitContainer4.Panel2.Controls.Add(this.MethodsTreeView);
             this.splitContainer4.Panel2.Controls.Add(this.methodspanel);
-            this.splitContainer4.Size = new System.Drawing.Size(264, 483);
+            this.splitContainer4.Size = new System.Drawing.Size(256, 483);
             this.splitContainer4.SplitterDistance = 232;
             this.splitContainer4.SplitterWidth = 6;
             this.splitContainer4.TabIndex = 0;
@@ -2684,7 +2720,7 @@ namespace Silver_J
             this.ClassesTreeView.Location = new System.Drawing.Point(0, 25);
             this.ClassesTreeView.Name = "ClassesTreeView";
             this.ClassesTreeView.ShowLines = false;
-            this.ClassesTreeView.Size = new System.Drawing.Size(262, 205);
+            this.ClassesTreeView.Size = new System.Drawing.Size(254, 205);
             this.ClassesTreeView.TabIndex = 1;
             this.ClassesTreeView.NodeMouseDoubleClick += new System.Windows.Forms.TreeNodeMouseClickEventHandler(this.ClassesTreeView_NodeMouseDoubleClick);
             // 
@@ -2697,7 +2733,7 @@ namespace Silver_J
             this.classespanel.GradientAngle = 90;
             this.classespanel.Location = new System.Drawing.Point(0, 0);
             this.classespanel.Name = "classespanel";
-            this.classespanel.Size = new System.Drawing.Size(262, 25);
+            this.classespanel.Size = new System.Drawing.Size(254, 25);
             this.classespanel.StartColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
             this.classespanel.TabIndex = 0;
             this.classespanel.Transparent1 = 150;
@@ -2721,7 +2757,7 @@ namespace Silver_J
             this.MethodsTreeView.Location = new System.Drawing.Point(0, 25);
             this.MethodsTreeView.Name = "MethodsTreeView";
             this.MethodsTreeView.ShowLines = false;
-            this.MethodsTreeView.Size = new System.Drawing.Size(262, 218);
+            this.MethodsTreeView.Size = new System.Drawing.Size(254, 218);
             this.MethodsTreeView.TabIndex = 1;
             this.MethodsTreeView.NodeMouseDoubleClick += new System.Windows.Forms.TreeNodeMouseClickEventHandler(this.MethodsTreeView_NodeMouseDoubleClick);
             // 
@@ -2734,7 +2770,7 @@ namespace Silver_J
             this.methodspanel.GradientAngle = 90;
             this.methodspanel.Location = new System.Drawing.Point(0, 0);
             this.methodspanel.Name = "methodspanel";
-            this.methodspanel.Size = new System.Drawing.Size(262, 25);
+            this.methodspanel.Size = new System.Drawing.Size(254, 25);
             this.methodspanel.StartColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
             this.methodspanel.TabIndex = 0;
             this.methodspanel.Transparent1 = 150;
@@ -2998,15 +3034,9 @@ namespace Silver_J
             this.textEditorContextMenu_ViewinWebBrowserMenuItem.Text = "View in Web Browser";
             this.textEditorContextMenu_ViewinWebBrowserMenuItem.Click += new System.EventHandler(this.textEditorContextMenu_ViewinWebBrowserMenuItem_Click);
             // 
-            // pictureBox1
+            // ExternalEditor
             // 
-            this.pictureBox1.Image = global::Silver_J.Properties.Resources.stored_for_later;
-            this.pictureBox1.Location = new System.Drawing.Point(33, 32);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(102, 99);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 13;
-            this.pictureBox1.TabStop = false;
+            this.ExternalEditor.FileName = "openFileDialog1";
             // 
             // MainForm
             // 
@@ -3056,6 +3086,8 @@ namespace Silver_J
             this.tabPage1.ResumeLayout(false);
             this.startpagepanel.ResumeLayout(false);
             this.startpagepanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ErrorsListContextMenuStrip.ResumeLayout(false);
             this.errorslistpanel.ResumeLayout(false);
             this.errorslistpanel.PerformLayout();
@@ -3068,7 +3100,6 @@ namespace Silver_J
             this.methodspanel.ResumeLayout(false);
             this.methodspanel.PerformLayout();
             this.textEditorContextMenuStrip.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -3349,6 +3380,9 @@ namespace Silver_J
         private System.Windows.Forms.ToolStripComboBox runMode;
         private System.Windows.Forms.ToolStripComboBox cpuConfig;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.ToolStripMenuItem File_LinkToSushiTextEditor;
+        private System.Windows.Forms.OpenFileDialog ExternalEditor;
     }
 }
 

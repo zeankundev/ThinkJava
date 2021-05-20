@@ -283,6 +283,26 @@ namespace Silver_J.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap media_1592848855_logo_buatan_indonesia_01 {
+            get {
+                object obj = ResourceManager.GetObject("media_1592848855_logo_buatan_indonesia_01", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap media_1592848872_logo_buatan_indonesia_02 {
+            get {
+                object obj = ResourceManager.GetObject("media_1592848872_logo_buatan_indonesia_02", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap multilinecomment {
             get {
                 object obj = ResourceManager.GetObject("multilinecomment", resourceCulture);
