@@ -7,7 +7,7 @@ An active Java IDE coded in C# for students, hobbyists, teams, friends and compa
     <img alt="Logo" src="https://discordapp.com/api/guilds/808892733204332575/widget.png?style=shield">
   </a>
 <img src="https://img.shields.io/badge/status-stable-green">
-<img src="https://img.shields.io/badge/buildversion-136-red">
+<img src="https://img.shields.io/badge/buildversion-148-red">
 
 ## What's new?
 1. Discord Rich Presence implementation
