@@ -10,9 +10,13 @@ An active Java IDE coded in C# for students, hobbyists, teams, friends and compa
 <img src="https://img.shields.io/badge/buildversion-148-red">
 
 ## What's new?
-1. Discord Rich Presence implementation
+:pushpin: In Build 148 (21st May 2021)
+<br>
+:heavy_check_mark: Discord Rich Presence implementation
 </br>
-<b>Note: SourceForge release coming soon</b>
+:heavy_check_mark: Bug fixes and also more major improvements
+<br>
+:heavy_check_mark: Fixed the Sushi Text Editor link
 
 ## How to use and modify?
 1. First, type the following code to your Command Prompt or Git Bash
