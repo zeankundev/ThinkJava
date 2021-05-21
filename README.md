@@ -2,11 +2,11 @@
 An active Java IDE coded in C# for students, hobbyists, teams, friends and companies. Fetaures invalid lines, error list, project explorer, auto completion (Senzo), applet maker, game maker for busy people or individuals. IDE project made for sixth grade elementary school project and for everyone.
 <br>
 [![Download ThinkJava. The Professional Java IDE](https://img.shields.io/sourceforge/dm/thinkjava-ide.svg)](https://sourceforge.net/projects/thinkjava-ide/files/latest/download)
-<br>
 [![Download ThinkJava. The Professional Java IDE](https://img.shields.io/sourceforge/dt/thinkjava-ide.svg)](https://sourceforge.net/projects/thinkjava-ide/files/latest/download)
-<br>
+  <a href="https://discord.com/invite/YARVk4qP2H">
+    <img alt="Logo" src="https://discordapp.com/api/guilds/808892733204332575/widget.png?style=shield">
+  </a>
 <img src="https://img.shields.io/badge/status-stable-green">
-<br>
 <img src="https://img.shields.io/badge/buildversion-136-red">
 
 ## What's new?
