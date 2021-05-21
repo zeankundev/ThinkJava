@@ -39,8 +39,3 @@ Want to make ThinkJava better by improving the code? Email me at zeanfender11@gm
 <br>
 Have fun using ThinkJava!
 <br>
-## Images
-<img src="https://a.fsdn.com/con/app/proj/thinkjava-ide/screenshots/s1.png/max/max/1">
-<img src="https://a.fsdn.com/con/app/proj/thinkjava-ide/screenshots/s2.png/max/max/1">
-<img src="https://a.fsdn.com/con/app/proj/thinkjava-ide/screenshots/s3.png/max/max/1">
-<img src="https://a.fsdn.com/con/app/proj/thinkjava-ide/screenshots/s4.png/max/max/1">
