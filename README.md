@@ -17,6 +17,8 @@ An active Java IDE coded in C# for students, hobbyists, teams, friends and compa
 :heavy_check_mark: Bug fixes and also more major improvements
 <br>
 :heavy_check_mark: Fixed the Sushi Text Editor link
+<br>
+:speech_balloon: Feedbacks are welcome by filling this [Google Form here.](https://forms.gle/V8GF3tsW4jnztFKF6)
 
 ## How to use and modify?
 1. First, type the following code to your Command Prompt or Git Bash
