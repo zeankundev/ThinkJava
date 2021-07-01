@@ -46,9 +46,9 @@ namespace Silver_J
                 if (args.Length == 1)
                 {
                     String file = args[0];
-                    //when filename extension is .slvjproj then call OpenProject function
+                    //when filename extension is .tjsln then call OpenProject function
                     //if file is other type then call OpenFiles_FromCMD
-                    if (Path.GetExtension(file) == ".slvjproj")
+                    if (Path.GetExtension(file) == ".tjsln")
                     {
                         Application.Run(new Start_Form());
                         MainForm mf = new MainForm();

@@ -980,5 +980,19 @@ namespace Silver_J
         {
             System.Diagnostics.Process.Start("https://www.youtube.com/watch?v=UDcxUurDVwo&t=5s");
         }
+
+        private void trackBar1_Scroll(object sender, EventArgs e)
+        {
+            label9.Text = "Your set limit: " + trackBar1.Value.ToString() + " KB";
+        }
+
+        private void trackBar2_Scroll(object sender, EventArgs e)
+        {
+            if (trackBar2.Value == 1) label11.Text = "Quality: Low";
+            if (trackBar2.Value == 2) label11.Text = "Quality: Medium";
+            if (trackBar2.Value == 3) label11.Text = "Quality: Automatic";
+            if (trackBar2.Value == 4) label11.Text = "Quality: High";
+            if (trackBar2.Value == 5) label11.Text = "Quality: ULTRA!!!!!!";
+        }
     }
 }

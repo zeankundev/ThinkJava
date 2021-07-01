@@ -52,6 +52,7 @@ namespace Silver_J
         {
             InitializeComponent();
             init();
+            initClock();
         }
 
         /// <summary>
@@ -153,7 +154,47 @@ namespace Silver_J
         {
             client.Dispose();
         }
-        
+
+        //**************************************************************************************************************
+        //      init clock
+        //**************************************************************************************************************
+
+        void initClock()
+        {
+            Timer tmr = null;
+            tmr = new Timer();
+            tmr.Interval = 1000;
+            tmr.Enabled = true;
+            tmr.Tick += Tmr_Tick;
+        }
+
+        private void Tmr_Tick(object sender, EventArgs e)
+        {
+            string datetime = DateTime.Now.ToString("dd/mm/yyyy HH:mm:ss");
+            dateTimeLabel.Text = datetime;
+            if (datetime.Contains("00:00:00"))
+            {
+                label1.Text = "Good morning! What do you want?";
+            }
+            else if (datetime.Contains("15:00:00"))
+            {
+                label1.Text = "Good afternoon! What do you want?";
+            }
+            else if (datetime.Contains("19:00:00"))
+            {
+                label1.Text = "Good night! What do you want?";
+            }
+            else if (datetime.Contains("01/01"))
+            {
+                label1.Text = "Happy new year! Today is the dev's birthday!";
+            }
+            else if (datetime.Contains("01/04"))
+            {
+                label1.Text = "HAPPY APRIL FOOLS DAY!";
+                mouseHoverLabel4.Visible = true;
+            }
+        }
+
 
         //**************************************************************************************************************
         //      get Current Project Type
@@ -1389,6 +1430,8 @@ namespace Silver_J
 
                 projectexplorerpanel.StartColor = Color.FromArgb(15, 15, 15);
                 projectexplorerpanel.EndColor = Color.FromArgb(15, 15, 15);
+                dateTimeLabel.ForeColor = Color.White;
+                buildver.ForeColor = Color.White;
                 classespanel.StartColor = Color.FromArgb(15, 15, 15);
                 classespanel.EndColor = Color.FromArgb(15, 15, 15);
                 methodspanel.StartColor = Color.FromArgb(15, 15, 15);
@@ -1840,6 +1883,8 @@ namespace Silver_J
             //checking views from Views menu
             String configfile = Application.StartupPath + "\\files\\config.slvjfile";
             String appearance = "";
+            String buildversion = "155";
+            String builddate = "1 July 2021";
             String splitcontain_1 = "";
             String splitcontain_2 = "";
             String splitcontain_3 = "";
@@ -1859,6 +1904,7 @@ namespace Silver_J
             String showendoflinemarkers = "";
             String showvisiblespaces = "";
             String autocompilejava = "";
+            buildver.Text = "Currently using ThinkJava b" + buildversion + " (" + builddate + ")";
             //reading each value from file
             using (XmlReader reader = XmlReader.Create(configfile))
             {
@@ -3875,7 +3921,7 @@ namespace Silver_J
         //      File -> Open Project
         //**************************************************************************************************************
         /// <summary>
-        /// project file(.slvjproj) is selected from open file dialog
+        /// project file(.tjsln) is selected from open file dialog
         /// each tag is read from file
         /// adding project names & files to tree view with image
         /// adding tabs to tabcontrol by reading files
@@ -3914,7 +3960,7 @@ namespace Silver_J
 
                         String projectfilename = OpenProjectFileDialog.FileName;
 
-                        //read all files from selected project file .slvjproj
+                        //read all files from selected project file .tjsln
                         List<String> fileslist = new List<String> { };
                         List<String> otherfileslist = new List<String> { };
                         String projectname = "";
@@ -4077,7 +4123,7 @@ namespace Silver_J
 
                     String projectfilename = OpenProjectFileDialog.FileName;
 
-                    //read all files from selected project file .slvjproj
+                    //read all files from selected project file .tjsln
                     List<String> fileslist = new List<String> { };
                     List<String> otherfileslist = new List<String> { };
                     String projectname = "";
@@ -4649,7 +4695,7 @@ namespace Silver_J
         //   OpenProject()
         //*****************************************************************
         /// <summary>
-        /// function to open project in Silver-J when .slvjproj file is associated with silver-j
+        /// function to open project in Silver-J when .tjsln file is associated with silver-j
         /// means to open project by double clicking on project file
         /// see Program.cs file
         /// </summary>
@@ -4664,7 +4710,7 @@ namespace Silver_J
             myTabControl.TabPages.Clear();
             this.Text = "ThinkJava";
 
-            //read all files from selected project file .slvjproj
+            //read all files from selected project file .tjsln
             List<String> fileslist = new List<String> { };
             List<String> otherfileslist = new List<String> { };
             String projectname = "";
@@ -5706,7 +5752,7 @@ namespace Silver_J
 
             String projectfilename = projfilename;
 
-            //read all files from selected project file .slvjproj
+            //read all files from selected project file .tjsln
             List<String> fileslist = new List<String> { };
             List<String> otherfileslist = new List<String> { };
             String projectname = "";
@@ -9506,6 +9552,11 @@ namespace Silver_J
         }
 
         private void File_RecentProjectMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ProjectExplorerTreeView_AfterSelect(object sender, TreeViewEventArgs e)
         {
 
         }

@@ -274,8 +274,8 @@ namespace Silver_J
             this.myTabControlContextMenu_OpenFileFolderMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.startpagepanel = new Silver_J.PanelZ();
+            this.dateTimeLabel = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.mouseHoverLabel4 = new Silver_J.MouseHoverLabel();
             this.mouseHoverLabel3 = new Silver_J.MouseHoverLabel();
             this.mouseHoverLabel2 = new Silver_J.MouseHoverLabel();
@@ -292,7 +292,6 @@ namespace Silver_J
             this.ErrorList_SelectAllMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ErrorList_CopyToClipboardMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.errorslistpanel = new Silver_J.PanelZ();
-            this.button1 = new System.Windows.Forms.Button();
             this.errorslabel = new System.Windows.Forms.Label();
             this.splitContainer4 = new System.Windows.Forms.SplitContainer();
             this.ClassesTreeView = new System.Windows.Forms.TreeView();
@@ -334,6 +333,7 @@ namespace Silver_J
             this.textEditorContextMenu_ViewinWebBrowserMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.ExternalEditor = new System.Windows.Forms.OpenFileDialog();
+            this.buildver = new System.Windows.Forms.Label();
             this.MyMenuStripZ.SuspendLayout();
             this.toolstrippanel.SuspendLayout();
             this.MyToolStripZ.SuspendLayout();
@@ -357,7 +357,6 @@ namespace Silver_J
             this.tabPage1.SuspendLayout();
             this.startpagepanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.ErrorsListContextMenuStrip.SuspendLayout();
             this.errorslistpanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer4)).BeginInit();
@@ -1141,14 +1140,14 @@ namespace Silver_J
             this.View_TabsAlign_BottomMenuItem});
             this.View_TabsAlignmentMenuItem.ForeColor = System.Drawing.Color.Black;
             this.View_TabsAlignmentMenuItem.Name = "View_TabsAlignmentMenuItem";
-            this.View_TabsAlignmentMenuItem.Size = new System.Drawing.Size(259, 22);
+            this.View_TabsAlignmentMenuItem.Size = new System.Drawing.Size(258, 22);
             this.View_TabsAlignmentMenuItem.Text = "Tabs Alignment                                  ";
             // 
             // View_TabsAlign_TopMenuItem
             // 
             this.View_TabsAlign_TopMenuItem.ForeColor = System.Drawing.Color.Black;
             this.View_TabsAlign_TopMenuItem.Name = "View_TabsAlign_TopMenuItem";
-            this.View_TabsAlign_TopMenuItem.Size = new System.Drawing.Size(124, 22);
+            this.View_TabsAlign_TopMenuItem.Size = new System.Drawing.Size(123, 22);
             this.View_TabsAlign_TopMenuItem.Text = "Top          ";
             this.View_TabsAlign_TopMenuItem.Click += new System.EventHandler(this.View_TabsAlign_TopMenuItem_Click);
             // 
@@ -1156,7 +1155,7 @@ namespace Silver_J
             // 
             this.View_TabsAlign_BottomMenuItem.ForeColor = System.Drawing.Color.Black;
             this.View_TabsAlign_BottomMenuItem.Name = "View_TabsAlign_BottomMenuItem";
-            this.View_TabsAlign_BottomMenuItem.Size = new System.Drawing.Size(124, 22);
+            this.View_TabsAlign_BottomMenuItem.Size = new System.Drawing.Size(123, 22);
             this.View_TabsAlign_BottomMenuItem.Text = "Bottom";
             this.View_TabsAlign_BottomMenuItem.Click += new System.EventHandler(this.View_TabsAlign_BottomMenuItem_Click);
             // 
@@ -1164,7 +1163,7 @@ namespace Silver_J
             // 
             this.View_StatusStripMenuItem.ForeColor = System.Drawing.Color.Black;
             this.View_StatusStripMenuItem.Name = "View_StatusStripMenuItem";
-            this.View_StatusStripMenuItem.Size = new System.Drawing.Size(259, 22);
+            this.View_StatusStripMenuItem.Size = new System.Drawing.Size(258, 22);
             this.View_StatusStripMenuItem.Text = "Status Strip";
             this.View_StatusStripMenuItem.Click += new System.EventHandler(this.View_StatusStripMenuItem_Click);
             // 
@@ -1172,27 +1171,27 @@ namespace Silver_J
             // 
             this.View_ToolStripMenuItem.ForeColor = System.Drawing.Color.Black;
             this.View_ToolStripMenuItem.Name = "View_ToolStripMenuItem";
-            this.View_ToolStripMenuItem.Size = new System.Drawing.Size(259, 22);
+            this.View_ToolStripMenuItem.Size = new System.Drawing.Size(258, 22);
             this.View_ToolStripMenuItem.Text = "Tool Strip";
             this.View_ToolStripMenuItem.Click += new System.EventHandler(this.View_ToolStripMenuItem_Click);
             // 
             // toolStripSeparator35
             // 
             this.toolStripSeparator35.Name = "toolStripSeparator35";
-            this.toolStripSeparator35.Size = new System.Drawing.Size(256, 6);
+            this.toolStripSeparator35.Size = new System.Drawing.Size(255, 6);
             // 
             // View_FullScreenMenuItem
             // 
             this.View_FullScreenMenuItem.ForeColor = System.Drawing.Color.Black;
             this.View_FullScreenMenuItem.Name = "View_FullScreenMenuItem";
-            this.View_FullScreenMenuItem.Size = new System.Drawing.Size(259, 22);
+            this.View_FullScreenMenuItem.Size = new System.Drawing.Size(258, 22);
             this.View_FullScreenMenuItem.Text = "Full Screen";
             this.View_FullScreenMenuItem.Click += new System.EventHandler(this.View_FullScreenMenuItem_Click);
             // 
             // toolStripSeparator34
             // 
             this.toolStripSeparator34.Name = "toolStripSeparator34";
-            this.toolStripSeparator34.Size = new System.Drawing.Size(256, 6);
+            this.toolStripSeparator34.Size = new System.Drawing.Size(255, 6);
             // 
             // View_AppearanceMenuItem
             // 
@@ -1204,7 +1203,7 @@ namespace Silver_J
             this.View_Appearance_NightMenuItem});
             this.View_AppearanceMenuItem.ForeColor = System.Drawing.Color.Black;
             this.View_AppearanceMenuItem.Name = "View_AppearanceMenuItem";
-            this.View_AppearanceMenuItem.Size = new System.Drawing.Size(259, 22);
+            this.View_AppearanceMenuItem.Size = new System.Drawing.Size(258, 22);
             this.View_AppearanceMenuItem.Text = "Appearance";
             // 
             // View_Appearance_DefaultMenuItem
@@ -1250,13 +1249,13 @@ namespace Silver_J
             // toolStripSeparator17
             // 
             this.toolStripSeparator17.Name = "toolStripSeparator17";
-            this.toolStripSeparator17.Size = new System.Drawing.Size(256, 6);
+            this.toolStripSeparator17.Size = new System.Drawing.Size(255, 6);
             // 
             // View_LineNumbersMenuItem
             // 
             this.View_LineNumbersMenuItem.ForeColor = System.Drawing.Color.Black;
             this.View_LineNumbersMenuItem.Name = "View_LineNumbersMenuItem";
-            this.View_LineNumbersMenuItem.Size = new System.Drawing.Size(259, 22);
+            this.View_LineNumbersMenuItem.Size = new System.Drawing.Size(258, 22);
             this.View_LineNumbersMenuItem.Text = "Line Numbers";
             this.View_LineNumbersMenuItem.Click += new System.EventHandler(this.View_LineNumbersMenuItem_Click);
             // 
@@ -1264,7 +1263,7 @@ namespace Silver_J
             // 
             this.View_LineHighlighterMenuItem.ForeColor = System.Drawing.Color.Black;
             this.View_LineHighlighterMenuItem.Name = "View_LineHighlighterMenuItem";
-            this.View_LineHighlighterMenuItem.Size = new System.Drawing.Size(259, 22);
+            this.View_LineHighlighterMenuItem.Size = new System.Drawing.Size(258, 22);
             this.View_LineHighlighterMenuItem.Text = "Line Highlighter";
             this.View_LineHighlighterMenuItem.Click += new System.EventHandler(this.View_LineHighlighterMenuItem_Click);
             // 
@@ -1272,7 +1271,7 @@ namespace Silver_J
             // 
             this.View_InvalidLinesMenuItem.ForeColor = System.Drawing.Color.Black;
             this.View_InvalidLinesMenuItem.Name = "View_InvalidLinesMenuItem";
-            this.View_InvalidLinesMenuItem.Size = new System.Drawing.Size(259, 22);
+            this.View_InvalidLinesMenuItem.Size = new System.Drawing.Size(258, 22);
             this.View_InvalidLinesMenuItem.Text = "Invalid Lines";
             this.View_InvalidLinesMenuItem.Click += new System.EventHandler(this.View_InvalidLinesMenuItem_Click);
             // 
@@ -1280,7 +1279,7 @@ namespace Silver_J
             // 
             this.View_EndLineMarkerMenuItem.ForeColor = System.Drawing.Color.Black;
             this.View_EndLineMarkerMenuItem.Name = "View_EndLineMarkerMenuItem";
-            this.View_EndLineMarkerMenuItem.Size = new System.Drawing.Size(259, 22);
+            this.View_EndLineMarkerMenuItem.Size = new System.Drawing.Size(258, 22);
             this.View_EndLineMarkerMenuItem.Text = "End of Line Marker";
             this.View_EndLineMarkerMenuItem.Click += new System.EventHandler(this.View_EndLineMarkerMenuItem_Click);
             // 
@@ -1288,20 +1287,20 @@ namespace Silver_J
             // 
             this.View_VisibleSpacesMenuItem.ForeColor = System.Drawing.Color.Black;
             this.View_VisibleSpacesMenuItem.Name = "View_VisibleSpacesMenuItem";
-            this.View_VisibleSpacesMenuItem.Size = new System.Drawing.Size(259, 22);
+            this.View_VisibleSpacesMenuItem.Size = new System.Drawing.Size(258, 22);
             this.View_VisibleSpacesMenuItem.Text = "Visible Spaces";
             this.View_VisibleSpacesMenuItem.Click += new System.EventHandler(this.View_VisibleSpacesMenuItem_Click);
             // 
             // toolStripSeparator18
             // 
             this.toolStripSeparator18.Name = "toolStripSeparator18";
-            this.toolStripSeparator18.Size = new System.Drawing.Size(256, 6);
+            this.toolStripSeparator18.Size = new System.Drawing.Size(255, 6);
             // 
             // View_ProjectExplorerMenuItem
             // 
             this.View_ProjectExplorerMenuItem.ForeColor = System.Drawing.Color.Black;
             this.View_ProjectExplorerMenuItem.Name = "View_ProjectExplorerMenuItem";
-            this.View_ProjectExplorerMenuItem.Size = new System.Drawing.Size(259, 22);
+            this.View_ProjectExplorerMenuItem.Size = new System.Drawing.Size(258, 22);
             this.View_ProjectExplorerMenuItem.Text = "Project Explorer";
             this.View_ProjectExplorerMenuItem.Click += new System.EventHandler(this.View_ProjectExplorerMenuItem_Click);
             // 
@@ -1309,7 +1308,7 @@ namespace Silver_J
             // 
             this.View_ClassesViewMenuItem.ForeColor = System.Drawing.Color.Black;
             this.View_ClassesViewMenuItem.Name = "View_ClassesViewMenuItem";
-            this.View_ClassesViewMenuItem.Size = new System.Drawing.Size(259, 22);
+            this.View_ClassesViewMenuItem.Size = new System.Drawing.Size(258, 22);
             this.View_ClassesViewMenuItem.Text = "Classes View";
             this.View_ClassesViewMenuItem.Click += new System.EventHandler(this.View_ClassesViewMenuItem_Click);
             // 
@@ -1317,7 +1316,7 @@ namespace Silver_J
             // 
             this.View_MethodsViewMenuItem.ForeColor = System.Drawing.Color.Black;
             this.View_MethodsViewMenuItem.Name = "View_MethodsViewMenuItem";
-            this.View_MethodsViewMenuItem.Size = new System.Drawing.Size(259, 22);
+            this.View_MethodsViewMenuItem.Size = new System.Drawing.Size(258, 22);
             this.View_MethodsViewMenuItem.Text = "Methods View";
             this.View_MethodsViewMenuItem.Click += new System.EventHandler(this.View_MethodsViewMenuItem_Click);
             // 
@@ -1326,7 +1325,7 @@ namespace Silver_J
             this.View_ErrorsListMenuItem.ForeColor = System.Drawing.Color.Black;
             this.View_ErrorsListMenuItem.Image = global::Silver_J.Properties.Resources.errors;
             this.View_ErrorsListMenuItem.Name = "View_ErrorsListMenuItem";
-            this.View_ErrorsListMenuItem.Size = new System.Drawing.Size(259, 22);
+            this.View_ErrorsListMenuItem.Size = new System.Drawing.Size(258, 22);
             this.View_ErrorsListMenuItem.Text = "Errors List";
             this.View_ErrorsListMenuItem.Click += new System.EventHandler(this.View_ErrorsListMenuItem_Click);
             // 
@@ -1334,21 +1333,21 @@ namespace Silver_J
             // 
             this.View_ShowErrorDialogMenuItem.ForeColor = System.Drawing.Color.Black;
             this.View_ShowErrorDialogMenuItem.Name = "View_ShowErrorDialogMenuItem";
-            this.View_ShowErrorDialogMenuItem.Size = new System.Drawing.Size(259, 22);
+            this.View_ShowErrorDialogMenuItem.Size = new System.Drawing.Size(258, 22);
             this.View_ShowErrorDialogMenuItem.Text = "Show Error Dialog";
             this.View_ShowErrorDialogMenuItem.Click += new System.EventHandler(this.View_ShowErrorDialogMenuItem_Click);
             // 
             // toolStripSeparator19
             // 
             this.toolStripSeparator19.Name = "toolStripSeparator19";
-            this.toolStripSeparator19.Size = new System.Drawing.Size(256, 6);
+            this.toolStripSeparator19.Size = new System.Drawing.Size(255, 6);
             // 
             // View_ViewinWebBrowserMenuItem
             // 
             this.View_ViewinWebBrowserMenuItem.ForeColor = System.Drawing.Color.Black;
             this.View_ViewinWebBrowserMenuItem.Image = global::Silver_J.Properties.Resources.appletproject;
             this.View_ViewinWebBrowserMenuItem.Name = "View_ViewinWebBrowserMenuItem";
-            this.View_ViewinWebBrowserMenuItem.Size = new System.Drawing.Size(259, 22);
+            this.View_ViewinWebBrowserMenuItem.Size = new System.Drawing.Size(258, 22);
             this.View_ViewinWebBrowserMenuItem.Text = "View in Web Browser";
             this.View_ViewinWebBrowserMenuItem.Click += new System.EventHandler(this.View_ViewinWebBrowserMenuItem_Click);
             // 
@@ -1568,20 +1567,20 @@ namespace Silver_J
             this.Help_ViewHelpTopicsMenuItem.ForeColor = System.Drawing.Color.Black;
             this.Help_ViewHelpTopicsMenuItem.Image = global::Silver_J.Properties.Resources.help;
             this.Help_ViewHelpTopicsMenuItem.Name = "Help_ViewHelpTopicsMenuItem";
-            this.Help_ViewHelpTopicsMenuItem.Size = new System.Drawing.Size(215, 22);
+            this.Help_ViewHelpTopicsMenuItem.Size = new System.Drawing.Size(214, 22);
             this.Help_ViewHelpTopicsMenuItem.Text = "View Help Topics                 ";
             this.Help_ViewHelpTopicsMenuItem.Click += new System.EventHandler(this.Help_ViewHelpTopicsMenuItem_Click);
             // 
             // toolStripSeparator27
             // 
             this.toolStripSeparator27.Name = "toolStripSeparator27";
-            this.toolStripSeparator27.Size = new System.Drawing.Size(212, 6);
+            this.toolStripSeparator27.Size = new System.Drawing.Size(211, 6);
             // 
             // toolStripMenuItem1
             // 
             this.toolStripMenuItem1.ForeColor = System.Drawing.Color.Black;
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(215, 22);
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(214, 22);
             this.toolStripMenuItem1.Text = "Merchandise Store";
             this.toolStripMenuItem1.Click += new System.EventHandler(this.toolStripMenuItem1_Click);
             // 
@@ -1589,7 +1588,7 @@ namespace Silver_J
             // 
             this.Help_AboutMenuItem.ForeColor = System.Drawing.Color.Black;
             this.Help_AboutMenuItem.Name = "Help_AboutMenuItem";
-            this.Help_AboutMenuItem.Size = new System.Drawing.Size(215, 22);
+            this.Help_AboutMenuItem.Size = new System.Drawing.Size(214, 22);
             this.Help_AboutMenuItem.Text = "About";
             this.Help_AboutMenuItem.Click += new System.EventHandler(this.Help_AboutMenuItem_Click);
             // 
@@ -1957,7 +1956,7 @@ namespace Silver_J
             // 
             this.FilenameToolStripLabel.ForeColor = System.Drawing.Color.White;
             this.FilenameToolStripLabel.Name = "FilenameToolStripLabel";
-            this.FilenameToolStripLabel.Size = new System.Drawing.Size(59, 17);
+            this.FilenameToolStripLabel.Size = new System.Drawing.Size(58, 17);
             this.FilenameToolStripLabel.Text = "ThinkJava";
             // 
             // toolStripStatusLabel2
@@ -2051,15 +2050,16 @@ namespace Silver_J
             this.ProjectExplorerTreeView.ContextMenuStrip = this.ProjectExplorerTreeViewContextMenuStrip;
             this.ProjectExplorerTreeView.Dock = System.Windows.Forms.DockStyle.Fill;
             this.ProjectExplorerTreeView.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ProjectExplorerTreeView.HideSelection = false;
             this.ProjectExplorerTreeView.ImageIndex = 9;
             this.ProjectExplorerTreeView.ImageList = this.ProjectExplorerImageList;
             this.ProjectExplorerTreeView.Location = new System.Drawing.Point(0, 25);
             this.ProjectExplorerTreeView.Name = "ProjectExplorerTreeView";
             this.ProjectExplorerTreeView.SelectedImageIndex = 9;
-            this.ProjectExplorerTreeView.ShowLines = false;
             this.ProjectExplorerTreeView.ShowNodeToolTips = true;
             this.ProjectExplorerTreeView.Size = new System.Drawing.Size(236, 373);
             this.ProjectExplorerTreeView.TabIndex = 1;
+            this.ProjectExplorerTreeView.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.ProjectExplorerTreeView_AfterSelect);
             this.ProjectExplorerTreeView.NodeMouseDoubleClick += new System.Windows.Forms.TreeNodeMouseClickEventHandler(this.ProjectExplorerTreeView_NodeMouseDoubleClick);
             // 
             // ProjectExplorerTreeViewContextMenuStrip
@@ -2301,7 +2301,7 @@ namespace Silver_J
             this.projectexplorerlabel.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.projectexplorerlabel.Location = new System.Drawing.Point(4, 4);
             this.projectexplorerlabel.Name = "projectexplorerlabel";
-            this.projectexplorerlabel.Size = new System.Drawing.Size(89, 15);
+            this.projectexplorerlabel.Size = new System.Drawing.Size(90, 15);
             this.projectexplorerlabel.TabIndex = 0;
             this.projectexplorerlabel.Text = "Project Explorer";
             // 
@@ -2425,8 +2425,9 @@ namespace Silver_J
             // 
             // startpagepanel
             // 
+            this.startpagepanel.Controls.Add(this.buildver);
+            this.startpagepanel.Controls.Add(this.dateTimeLabel);
             this.startpagepanel.Controls.Add(this.pictureBox2);
-            this.startpagepanel.Controls.Add(this.pictureBox1);
             this.startpagepanel.Controls.Add(this.mouseHoverLabel4);
             this.startpagepanel.Controls.Add(this.mouseHoverLabel3);
             this.startpagepanel.Controls.Add(this.mouseHoverLabel2);
@@ -2449,6 +2450,16 @@ namespace Silver_J
             this.startpagepanel.Transparent2 = 255;
             this.startpagepanel.Paint += new System.Windows.Forms.PaintEventHandler(this.startpagepanel_Paint);
             // 
+            // dateTimeLabel
+            // 
+            this.dateTimeLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.dateTimeLabel.AutoSize = true;
+            this.dateTimeLabel.Location = new System.Drawing.Point(475, 332);
+            this.dateTimeLabel.Name = "dateTimeLabel";
+            this.dateTimeLabel.Size = new System.Drawing.Size(95, 15);
+            this.dateTimeLabel.TabIndex = 15;
+            this.dateTimeLabel.Text = "01/01/2021 00:00";
+            // 
             // pictureBox2
             // 
             this.pictureBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -2460,16 +2471,6 @@ namespace Silver_J
             this.pictureBox2.TabIndex = 14;
             this.pictureBox2.TabStop = false;
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::Silver_J.Properties.Resources.stored_for_later;
-            this.pictureBox1.Location = new System.Drawing.Point(33, 32);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(102, 99);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 13;
-            this.pictureBox1.TabStop = false;
-            // 
             // mouseHoverLabel4
             // 
             this.mouseHoverLabel4.AutoSize = true;
@@ -2480,6 +2481,7 @@ namespace Silver_J
             this.mouseHoverLabel4.Size = new System.Drawing.Size(225, 21);
             this.mouseHoverLabel4.TabIndex = 12;
             this.mouseHoverLabel4.Text = "pls dont click me (just click me)";
+            this.mouseHoverLabel4.Visible = false;
             this.mouseHoverLabel4.Click += new System.EventHandler(this.mouseHoverLabel4_Click);
             // 
             // mouseHoverLabel3
@@ -2525,11 +2527,11 @@ namespace Silver_J
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(163, 62);
+            this.label1.Location = new System.Drawing.Point(58, 65);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(240, 32);
+            this.label1.Size = new System.Drawing.Size(392, 32);
             this.label1.TabIndex = 8;
-            this.label1.Text = "ThinkJava (build 148)";
+            this.label1.Text = "Good morning! What do you want?";
             // 
             // startpagepanel_loadsampleproject
             // 
@@ -2655,7 +2657,6 @@ namespace Silver_J
             // 
             // errorslistpanel
             // 
-            this.errorslistpanel.Controls.Add(this.button1);
             this.errorslistpanel.Controls.Add(this.errorslabel);
             this.errorslistpanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.errorslistpanel.EndColor = System.Drawing.Color.Gainsboro;
@@ -2667,18 +2668,6 @@ namespace Silver_J
             this.errorslistpanel.TabIndex = 0;
             this.errorslistpanel.Transparent1 = 255;
             this.errorslistpanel.Transparent2 = 255;
-            // 
-            // button1
-            // 
-            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(754, 2);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(112, 21);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "Clear Errors";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // errorslabel
             // 
@@ -3038,6 +3027,16 @@ namespace Silver_J
             // 
             this.ExternalEditor.FileName = "openFileDialog1";
             // 
+            // buildver
+            // 
+            this.buildver.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.buildver.AutoSize = true;
+            this.buildver.Location = new System.Drawing.Point(8, 336);
+            this.buildver.Name = "buildver";
+            this.buildver.Size = new System.Drawing.Size(334, 15);
+            this.buildver.TabIndex = 16;
+            this.buildver.Text = "Currently using ThinkJava b%BUILD_VER% (%UPDATE_DATE%)";
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -3087,7 +3086,6 @@ namespace Silver_J
             this.startpagepanel.ResumeLayout(false);
             this.startpagepanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ErrorsListContextMenuStrip.ResumeLayout(false);
             this.errorslistpanel.ResumeLayout(false);
             this.errorslistpanel.PerformLayout();
@@ -3368,7 +3366,6 @@ namespace Silver_J
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator49;
         private MouseHoverLabel startpagepanel_loadsampleproject;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button1;
         private MouseHoverLabel mouseHoverLabel1;
         private MouseHoverLabel mouseHoverLabel2;
         private PanelZ startpagepanel;
@@ -3379,10 +3376,11 @@ namespace Silver_J
         private MouseHoverLabel mouseHoverLabel4;
         private System.Windows.Forms.ToolStripComboBox runMode;
         private System.Windows.Forms.ToolStripComboBox cpuConfig;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.ToolStripMenuItem File_LinkToSushiTextEditor;
         private System.Windows.Forms.OpenFileDialog ExternalEditor;
+        private System.Windows.Forms.Label dateTimeLabel;
+        private System.Windows.Forms.Label buildver;
     }
 }
 

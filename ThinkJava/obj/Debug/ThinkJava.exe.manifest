@@ -79,14 +79,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="ThinkJava.exe" size="3334144">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="ThinkJava.exe" size="3339264">
       <assemblyIdentity name="ThinkJava" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>Tyw79EW4VbMMp4kkfGp2FXfQHJ7HkkFQWAtYTDgqzjk=</dsig:DigestValue>
+        <dsig:DigestValue>rTQn8XANPix6CKgxBCu5fGKkL4IJSvDfXxBgFNpubmY=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

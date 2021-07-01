@@ -104,6 +104,20 @@ namespace Silver_J
                                            "BounceBall.java",
                                        };
 
+        String[] game_engine = {
+                                             Application.StartupPath+"\\Samples\\BasicGameEngineInJava\\Game.slvjfile",
+                                             Application.StartupPath+"\\Samples\\BasicGameEngineInJava\\Texture.slvjfile",
+                                             Application.StartupPath+"\\Samples\\BasicGameEngineInJava\\Camera.slvjfile",
+                                             Application.StartupPath+"\\Samples\\BasicGameEngineInJava\\Screen.slvjfile"
+                                             };
+
+        String[] game_engine_2 ={
+                                           "Game.java",
+                                           "Texture.java",
+                                           "Camera.java",
+                                           "Screen.java",
+                                       };
+
         String[] buttons_demo_files = {
                                              Application.StartupPath+"\\Samples\\ButtonsDemo\\ButtonsDemo.slvjfile"
                                              };
@@ -236,7 +250,7 @@ namespace Silver_J
                     project_name = "BasicControlsDemo";
 
                     String directory = projectfolder + "\\BasicControlsDemo";
-                    String projectfile = "BasicControlsDemo.slvjproj";
+                    String projectfile = "BasicControlsDemo.tjsln";
 
                     if (Directory.Exists(directory))
                     {
@@ -294,7 +308,7 @@ namespace Silver_J
                                         xmlwriter.WriteStartDocument();
                                         xmlwriter.WriteStartElement("SilverJProject");
                                         xmlwriter.WriteString("\n");
-                                        xmlwriter.WriteComment("Silver-J (1.0) Java Application Project");
+                                        xmlwriter.WriteComment("ThinkJava (latest) Java Application Project");
                                         xmlwriter.WriteString("\n");
                                         xmlwriter.WriteElementString("ProjectName", "BasicControlsDemo");
                                         xmlwriter.WriteString("\n");
@@ -361,7 +375,7 @@ namespace Silver_J
                     project_name = "BounceBall";
 
                     String directory = projectfolder + "\\BounceBall";
-                    String projectfile = "BounceBall.slvjproj";
+                    String projectfile = "BounceBall.tjsln";
 
                     if (Directory.Exists(directory))
                     {
@@ -415,7 +429,7 @@ namespace Silver_J
                                     xmlwriter.WriteStartDocument();
                                     xmlwriter.WriteStartElement("SilverJProject");
                                     xmlwriter.WriteString("\n");
-                                    xmlwriter.WriteComment("Silver-J (1.0) Java Application Project");
+                                    xmlwriter.WriteComment("ThinkJava (latest) Java Application Project");
                                     xmlwriter.WriteString("\n");
                                     xmlwriter.WriteElementString("ProjectName", "BounceBall");
                                     xmlwriter.WriteString("\n");
@@ -449,7 +463,7 @@ namespace Silver_J
                     project_name = "ButtonsDemo";
 
                     String directory = projectfolder + "\\ButtonsDemo";
-                    String projectfile = "ButtonsDemo.slvjproj";
+                    String projectfile = "ButtonsDemo.tjsln";
 
                     if (Directory.Exists(directory))
                     {
@@ -503,7 +517,7 @@ namespace Silver_J
                                     xmlwriter.WriteStartDocument();
                                     xmlwriter.WriteStartElement("SilverJProject");
                                     xmlwriter.WriteString("\n");
-                                    xmlwriter.WriteComment("Silver-J (1.0) Java Application Project");
+                                    xmlwriter.WriteComment("ThinkJava (latest) Java Application Project");
                                     xmlwriter.WriteString("\n");
                                     xmlwriter.WriteElementString("ProjectName", "ButtonsDemo");
                                     xmlwriter.WriteString("\n");
@@ -538,7 +552,7 @@ namespace Silver_J
                     project_name = "Calculator";
 
                     String directory = projectfolder + "\\Calculator";
-                    String projectfile = "Calculator.slvjproj";
+                    String projectfile = "Calculator.tjsln";
 
                     if (Directory.Exists(directory))
                     {
@@ -592,7 +606,7 @@ namespace Silver_J
                                     xmlwriter.WriteStartDocument();
                                     xmlwriter.WriteStartElement("SilverJProject");
                                     xmlwriter.WriteString("\n");
-                                    xmlwriter.WriteComment("Silver-J (1.0) Java Application Project");
+                                    xmlwriter.WriteComment("ThinkJava (latest) Java Application Project");
                                     xmlwriter.WriteString("\n");
                                     xmlwriter.WriteElementString("ProjectName", "Calculator");
                                     xmlwriter.WriteString("\n");
@@ -626,7 +640,7 @@ namespace Silver_J
                     project_name = "FontsTest";
 
                     String directory = projectfolder + "\\FontsTest";
-                    String projectfile = "FontsTest.slvjproj";
+                    String projectfile = "FontsTest.tjsln";
 
                     if (Directory.Exists(directory))
                     {
@@ -681,7 +695,7 @@ namespace Silver_J
                                     xmlwriter.WriteStartDocument();
                                     xmlwriter.WriteStartElement("SilverJProject");
                                     xmlwriter.WriteString("\n");
-                                    xmlwriter.WriteComment("Silver-J (1.0) Java Application Project");
+                                    xmlwriter.WriteComment("ThinkJava (latest) Java Application Project");
                                     xmlwriter.WriteString("\n");
                                     xmlwriter.WriteElementString("ProjectName", "FontsTest");
                                     xmlwriter.WriteString("\n");
@@ -716,7 +730,7 @@ namespace Silver_J
                     project_name = "GraphicsTest";
 
                     String directory = projectfolder + "\\GraphicsTest";
-                    String projectfile = "GraphicsTest.slvjproj";
+                    String projectfile = "GraphicsTest.tjsln";
 
                     if (Directory.Exists(directory))
                     {
@@ -776,7 +790,7 @@ namespace Silver_J
                                     xmlwriter.WriteStartDocument();
                                     xmlwriter.WriteStartElement("SilverJProject");
                                     xmlwriter.WriteString("\n");
-                                    xmlwriter.WriteComment("Silver-J (1.0) Java Application Project");
+                                    xmlwriter.WriteComment("ThinkJava (latest) Java Application Project");
                                     xmlwriter.WriteString("\n");
                                     xmlwriter.WriteElementString("ProjectName", "GraphicsTest");
                                     xmlwriter.WriteString("\n");
@@ -812,7 +826,7 @@ namespace Silver_J
                     project_name = "JavaHTMLEditor";
 
                     String directory = projectfolder + "\\JavaHTMLEditor";
-                    String projectfile = "JavaHTMLEditor.slvjproj";
+                    String projectfile = "JavaHTMLEditor.tjsln";
 
                     if (Directory.Exists(directory))
                     {
@@ -867,7 +881,7 @@ namespace Silver_J
                                     xmlwriter.WriteStartDocument();
                                     xmlwriter.WriteStartElement("SilverJProject");
                                     xmlwriter.WriteString("\n");
-                                    xmlwriter.WriteComment("Silver-J (1.0) Java Application Project");
+                                    xmlwriter.WriteComment("ThinkJava (latest) Java Application Project");
                                     xmlwriter.WriteString("\n");
                                     xmlwriter.WriteElementString("ProjectName", "JavaHTMLEditor");
                                     xmlwriter.WriteString("\n");
@@ -900,7 +914,7 @@ namespace Silver_J
                     project_name = "LookAndFeelDemo";
 
                     String directory = projectfolder + "\\LookAndFeelDemo";
-                    String projectfile = "LookAndFeelDemo.slvjproj";
+                    String projectfile = "LookAndFeelDemo.tjsln";
 
                     if (Directory.Exists(directory))
                     {
@@ -957,7 +971,7 @@ namespace Silver_J
                                         xmlwriter.WriteStartDocument();
                                         xmlwriter.WriteStartElement("SilverJProject");
                                         xmlwriter.WriteString("\n");
-                                        xmlwriter.WriteComment("Silver-J (1.0) Java Application Project");
+                                        xmlwriter.WriteComment("ThinkJava (latest) Java Application Project");
                                         xmlwriter.WriteString("\n");
                                         xmlwriter.WriteElementString("ProjectName", "LookAndFeelDemo");
                                         xmlwriter.WriteString("\n");
@@ -1007,7 +1021,7 @@ namespace Silver_J
                     project_name = "Notepad";
 
                     String directory = projectfolder + "\\Notepad";
-                    String projectfile = "Notepad.slvjproj";
+                    String projectfile = "Notepad.tjsln";
 
                     if (Directory.Exists(directory))
                     {
@@ -1061,7 +1075,7 @@ namespace Silver_J
                                     xmlwriter.WriteStartDocument();
                                     xmlwriter.WriteStartElement("SilverJProject");
                                     xmlwriter.WriteString("\n");
-                                    xmlwriter.WriteComment("Silver-J (1.0) Java Application Project");
+                                    xmlwriter.WriteComment("ThinkJava (latest) Java Application Project");
                                     xmlwriter.WriteString("\n");
                                     xmlwriter.WriteElementString("ProjectName", "Notepad");
                                     xmlwriter.WriteString("\n");
@@ -1094,7 +1108,7 @@ namespace Silver_J
                     project_name = "PaintApp";
 
                     String directory = projectfolder + "\\PaintApp";
-                    String projectfile = "PaintApp.slvjproj";
+                    String projectfile = "PaintApp.tjsln";
 
                     if (Directory.Exists(directory))
                     {
@@ -1148,9 +1162,95 @@ namespace Silver_J
                                     xmlwriter.WriteStartDocument();
                                     xmlwriter.WriteStartElement("SilverJProject");
                                     xmlwriter.WriteString("\n");
-                                    xmlwriter.WriteComment("Silver-J (1.0) Java Application Project");
+                                    xmlwriter.WriteComment("ThinkJava (b148) Java Application Project");
                                     xmlwriter.WriteString("\n");
                                     xmlwriter.WriteElementString("ProjectName", "PaintApp");
+                                    xmlwriter.WriteString("\n");
+                                    xmlwriter.WriteElementString("ProjectLocationFolder", directory);
+                                    xmlwriter.WriteString("\n");
+                                    xmlwriter.WriteElementString("ProjectLocationFile", directory + "\\" + projectfile);
+                                    xmlwriter.WriteString("\n");
+                                    xmlwriter.WriteElementString("ProjectType", "ApplicationType");
+                                    xmlwriter.WriteString("\n");
+                                    xmlwriter.WriteElementString("MainClassFile", directory + "\\srcclasses" + "\\" + paintapp_2[0]);
+                                    xmlwriter.WriteString("\n");
+                                    xmlwriter.WriteElementString("JavaClassFile", directory + "\\srcclasses" + "\\" + paintapp_2[0]);
+                                    xmlwriter.WriteString("\n");
+                                    xmlwriter.WriteElementString("VisualFile", directory + "\\srcclasses" + "\\" + paintapp_2[0]);
+                                    xmlwriter.WriteEndElement();
+                                    xmlwriter.WriteEndDocument();
+                                    xmlwriter.Close();
+                                }
+
+                            }
+                        }
+
+                        is_project_created = true;
+                    }
+                }
+
+                else if (selected_item == "Game Engine in Java")
+                {
+                    project_name = "Game Engine in Java";
+
+                    String directory = projectfolder + "\\BasicGameEngineInJava";
+                    String projectfile = "BasicGameEngineInJava.tjsln";
+
+                    if (Directory.Exists(directory))
+                    {
+                        MessageBox.Show("The selected project is already exists in current location", "Error............");
+                    }
+
+                    else
+                    {
+
+                        Directory.CreateDirectory(directory);
+
+                        if (Directory.Exists(directory))
+                        {
+                            project_folder = directory;
+
+                            project_file = directory + "\\" + projectfile;
+                        }
+
+                        if (File.Exists(paintapp_files[0]))
+                        {
+                            String filename = paintapp_files[0];
+                            String fname = filename.Substring(filename.LastIndexOf("\\") + 1);
+                            fname = fname.Remove(fname.Length - 9);
+                            fname = fname + ".java";
+
+                            if (Directory.Exists(directory))
+                            {
+                                String src = directory + "\\src";
+                                String srcclasses = directory + "\\srcclasses";
+                                String classes = directory + "\\classes";
+
+                                Directory.CreateDirectory(src);
+                                Directory.CreateDirectory(srcclasses);
+                                Directory.CreateDirectory(classes);
+
+                                String content = "";
+
+                                content = File.ReadAllText(paintapp_files[0]);
+
+                                if (Directory.Exists(srcclasses))
+                                {
+                                    StreamWriter strw = new StreamWriter(File.Create(srcclasses + "\\" + fname));
+                                    strw.Write(content);
+                                    strw.Close();
+                                    strw.Dispose();
+                                }
+
+                                //creating & writing slvjproj file 
+                                using (XmlWriter xmlwriter = XmlWriter.Create(directory + "\\" + projectfile))
+                                {
+                                    xmlwriter.WriteStartDocument();
+                                    xmlwriter.WriteStartElement("SilverJProject");
+                                    xmlwriter.WriteString("\n");
+                                    xmlwriter.WriteComment("ThinkJava (b148) Java Application Project");
+                                    xmlwriter.WriteString("\n");
+                                    xmlwriter.WriteElementString("ProjectName", "BasicGameEngineInJava");
                                     xmlwriter.WriteString("\n");
                                     xmlwriter.WriteElementString("ProjectLocationFolder", directory);
                                     xmlwriter.WriteString("\n");

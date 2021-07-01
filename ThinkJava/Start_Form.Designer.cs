@@ -69,9 +69,9 @@ namespace Silver_J
             // 
             this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox2.Image = global::Silver_J.Properties.Resources.Rolling_1s_200px__1_;
-            this.pictureBox2.Location = new System.Drawing.Point(12, 238);
+            this.pictureBox2.Location = new System.Drawing.Point(9, 227);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(23, 22);
+            this.pictureBox2.Size = new System.Drawing.Size(30, 34);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 5;
             this.pictureBox2.TabStop = false;
@@ -80,11 +80,11 @@ namespace Silver_J
             // 
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(42, 242);
+            this.label3.Location = new System.Drawing.Point(54, 234);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(176, 15);
+            this.label3.Size = new System.Drawing.Size(217, 20);
             this.label3.TabIndex = 3;
             this.label3.Text = "Abstracting the rummage disc...";
             this.label3.Click += new System.EventHandler(this.label3_Click);

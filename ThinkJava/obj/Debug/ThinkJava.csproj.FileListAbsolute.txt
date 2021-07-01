@@ -106,7 +106,6 @@ E:\ongoing projects\Java IDE C#\Silver-J\ThinkJava\bin\Debug\ThinkJava.exe.manif
 E:\ongoing projects\Java IDE C#\Silver-J\ThinkJava\bin\Debug\ThinkJava.application
 E:\ongoing projects\Java IDE C#\Silver-J\ThinkJava\bin\Debug\ThinkJava.exe
 E:\ongoing projects\Java IDE C#\Silver-J\ThinkJava\bin\Debug\ThinkJava.pdb
-E:\ongoing projects\Java IDE C#\Silver-J\ThinkJava\obj\Debug\ThinkJava.csprojAssemblyReference.cache
 E:\ongoing projects\Java IDE C#\Silver-J\ThinkJava\obj\Debug\Silver_J.About_Form.resources
 E:\ongoing projects\Java IDE C#\Silver-J\ThinkJava\obj\Debug\Silver_J.Find_Form.resources
 E:\ongoing projects\Java IDE C#\Silver-J\ThinkJava\obj\Debug\Silver_J.GoTo_Form.resources
@@ -156,3 +155,4 @@ E:\ongoing projects\Java IDE C#\Silver-J\ThinkJava\bin\Debug\Newtonsoft.Json.dll
 E:\ongoing projects\Java IDE C#\Silver-J\ThinkJava\bin\Debug\DiscordRPC.pdb
 E:\ongoing projects\Java IDE C#\Silver-J\ThinkJava\bin\Debug\DiscordRPC.xml
 E:\ongoing projects\Java IDE C#\Silver-J\ThinkJava\bin\Debug\Newtonsoft.Json.xml
+E:\ongoing projects\Java IDE C#\Silver-J\ThinkJava\obj\Debug\ThinkJava.csproj.AssemblyReference.cache
