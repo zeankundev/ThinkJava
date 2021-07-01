@@ -10,13 +10,13 @@ An active Java IDE coded in C# for students, hobbyists, teams, friends and compa
 <img src="https://img.shields.io/badge/buildversion-148-red">
 
 ## What's new?
-:pushpin: In Build 148 (21st May 2021)
+:pushpin: In Build 155 (1st July 2021 5:32 PM GMT +7)
 <br>
-:heavy_check_mark: Discord Rich Presence implementation
+:heavy_check_mark: Newer start screen
 </br>
-:heavy_check_mark: Bug fixes and also more major improvements
+:heavy_check_mark: Greeting text at start page according to date and time set on PC.
 <br>
-:heavy_check_mark: Fixed the Sushi Text Editor link
+:heavy_check_mark: Build version at start page. You can now contact the developer or report any error that requires your build version.
 <br>
 :speech_balloon: Feedbacks are welcome by filling this [Google Form here.](https://forms.gle/V8GF3tsW4jnztFKF6)
 
