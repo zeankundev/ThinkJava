@@ -16,7 +16,7 @@ An active Java IDE coded in C# for students, hobbyists, teams, friends and compa
 </br>
 :heavy_check_mark: Greeting text at start page according to date and time set on PC.
 <br>
-:heavy_check_mark: Build version at start page. You can now contact the developer or report any error that requires your build version.
+:heavy_check_mark: Build version at start page. You can now contact the developer or report any error that requires your build version such as bug fix submission and etc.
 <br>
 :speech_balloon: Feedbacks are welcome by filling this [Google Form here.](https://forms.gle/V8GF3tsW4jnztFKF6)
 
