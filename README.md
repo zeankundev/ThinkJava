@@ -26,6 +26,14 @@ An active Java IDE coded in C# for students, hobbyists, teams, friends and compa
 ```
 git clone https://github.com/zeankundev/ThinkJava/
 ```
+***Note: if you want to make your own IDE based on ThinkJava, you may fork this repository.***
+<br>
+How to do?
+* Fork this repository
+* Open GitHub Desktop and clone the repo that you just have forked
+* Open your cloned repository and open the .sln file. ***Note: i am looking for instructions on how to open .sln files on monodevelop.***
+<br>
+
 To get the latest version of the code, run this in your terminal.
 ```
 git pull
